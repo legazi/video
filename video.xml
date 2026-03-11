@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <loc>https://example.com/adobo.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://example.com/images/adobo-thumbnail.jpg</video:thumbnail_loc>
+      <video:title>How to Cook Adobo</video:title>
+      <video:description>Step-by-step tutorial on cooking adobo.</video:description>
+      <video:content_loc>https://example.com/videos/adobo.mp4</video:content_loc>
+      <video:player_loc>https://example.com/adobo.html</video:player_loc>
+      <video:duration>150</video:duration>
+      <video:publication_date>2026-03-11</video:publication_date>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://example.com/sinigang.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://example.com/images/sinigang-thumbnail.jpg</video:thumbnail_loc>
+      <video:title>How to Cook Sinigang</video:title>
+      <video:description>A delicious Filipino sour soup recipe.</video:description>
+      <video:content_loc>https://example.com/videos/sinigang.mp4</video:content_loc>
+      <video:player_loc>https://example.com/sinigang.html</video:player_loc>
+      <video:duration>180</video:duration>
+      <video:publication_date>2026-03-10</video:publication_date>
+    </video:video>
+  </url>
+
+</urlset>
